@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Gigaom New Relic
- * Plugin URI: http://wordpress.org/plugins/go-newrelic/
+ * Plugin Name: SimpleMediaCode New Relic
+ * Plugin URI: http://simplemediacode.com/wordpress/
  * Description: Sets the New Relic app name and other configuration values based on WordPress configuration. New Relic profiles code performance and activity, http://newrelic.com .
- * Version: 0.3
- * Author:  Gigaom
+ * Version: 1.0.0
+ * Author:  Gigaom, rolandinsh
  * License: GPL2
  */
 
