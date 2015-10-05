@@ -1,22 +1,22 @@
 # === Gigaom New Relic ===
 
-Contributors: misterbisson, zbtirrell
+Contributors: misterbisson, zbtirrell, rolandinsh
 
-Tags: monitoring, telemetry, server monitoring, performance monitoring, newrelic, new relic, Gigaom
+Tags: monitoring, telemetry, server monitoring, performance monitoring, newrelic, new relic, Gigaom, rolandinsh, SimpleMediaCode, Umbrovskis
 
 Requires at least: 3.5.1
 
-Tested up to: 4.0
+Tested up to: 4.3.1
 
 Stable tag: trunk
 
 Configures New Relic to better track performance, errors, and uptime of WordPress sites, including multisite
 
-## == Description ==
+## Description 
 
 Supports both <a href="http://newrelic.com">New Relic</a> APM and Browser monitoring to give a clear picture of how your site performs both on the server and in the browser.
 
-### = Application Performance Monitoring (APM) =
+### Application Performance Monitoring (APM) 
 
 Automatically detects if the <a href="https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php">APM extensions</a> are installed on the server. If so, the plugin will start reporting into the New Relic account associated with the <a href="https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#license_key">license key used when installing the extension</a>.
 
@@ -24,7 +24,7 @@ There's no UI, but the plugin automatically sets the app name and other configur
 
 Each blog in a multi-site installation is tracked separately, using the name of the blog as the app name.
 
-### = Browser monitoring (RUM) =
+### Browser monitoring (RUM) 
 
 Real user monitoring (browser monitoring) is automatically enabled if the APM extension is active, but in situations where the APM extension can't be used, the plugin can still be used to track browser performance.
 
@@ -37,16 +37,12 @@ This mode requires some configuration:
 The plugin extracts the configuration details from the JS and inserts them with a clean copy of the JS on each page (this cannot be used to inject arbitrary JS into the page).
 
 Due to limitations of the Browser monitoring service/API, Browser-only monitoring does not include all the data or separate reporting of activity in separate apps as APM does.
-
-### = In the WordPress.org plugin repo =
-
-Here: https://wordpress.org/plugins/go-newrelic/
-
-### = Fork me! =
+ 
+### Based on GigaOM
 
 This plugin is on Github: https://github.com/gigaOM/go-newrelic
 
-## == Installation ==
+## GigaOM version's Installation
 
 1. Install and activate New Relic's PHP agent, https://docs.newrelic.com/docs/php/new-relic-for-php#installation
 1. The web server should appear in New Relic's dashboard
@@ -54,7 +50,7 @@ This plugin is on Github: https://github.com/gigaOM/go-newrelic
 1. Go back to the New Relic dashboard and enjoy monitoring each WordPress blog (and different aspects of each blog)
 1. Follow the Gigaom engineering team at http://kitchen.gigaom.com and https://github.com/gigaom/
 
-## == Screenshots ==
+## Screenshots 
 
 1. New Relic application list, showing two blogs. Each WordPress blog is reported as four applications in New Relic to separate reader, writer, cron, and admin-ajax activity for better detail and fine-grained control.
 2. New Relic application overview, showing performance history for a single app.
