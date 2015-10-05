@@ -1,4 +1,4 @@
-# === Gigaom New Relic ===
+# Gigaom New Relic
 
 Contributors: misterbisson, zbtirrell, rolandinsh
 
