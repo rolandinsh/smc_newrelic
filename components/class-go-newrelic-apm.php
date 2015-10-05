@@ -1,18 +1,18 @@
 <?php
 
-class GO_NewRelic_APM
+class SMC_NewRelic_APM
 {
 
     private $config;
-    private $go_newrelic;
+    private $smc_newrelic;
 
-    public function __construct($go_newrelic)
+    public function __construct($smc_newrelic)
     {
         // get the calling object
-        $this->go_newrelic = $go_newrelic;
+        $this->smc_newrelic = $smc_newrelic;
 
         // can't lazy load the config, we need
-        $this->config = $this->go_newrelic->config();
+        $this->config = $this->smc_newrelic->config();
 
         // the license key is typically set elsewhere during the daemon/module installation,
         // but this allows some potential future where the license key is set in the WP dashboard
@@ -28,7 +28,7 @@ class GO_NewRelic_APM
         if (isset($this->config['capture-params']) && $this->config['capture-params']) {
             newrelic_capture_params();
         }// END if
-        ini_set('newrelic.ignored_params', $this->go_newrelic->config('ignored-params'));
+        ini_set('newrelic.ignored_params', $this->smc_newrelic->config('ignored-params'));
 
         // set logging parameters based on request context
         // ajax responses _cannot_ have RUM in them, for example
@@ -56,7 +56,7 @@ class GO_NewRelic_APM
     public function init()
     {
         // set the app name
-        newrelic_set_appname($this->go_newrelic->get_appname());
+        newrelic_set_appname($this->smc_newrelic->get_appname());
 
         // not all versions of the php extension support this method
         if (!function_exists('newrelic_set_user_attributes')) {

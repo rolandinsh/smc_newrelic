@@ -1,6 +1,6 @@
 <?php
 
-class GO_NewRelic_Wpcli extends WP_CLI_Command
+class SMC_NewRelic_Wpcli extends WP_CLI_Command
 {
 
     private $token = NULL;

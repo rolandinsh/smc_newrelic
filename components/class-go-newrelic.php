@@ -1,6 +1,6 @@
 <?php
 
-class GO_NewRelic
+class SMC_NewRelic
 {
 
     private $apm;
@@ -37,7 +37,7 @@ class GO_NewRelic
     {
         if (!$this->browser) {
             require_once __DIR__ . '/class-go-newrelic-browser.php';
-            $this->browser = new GO_NewRelic_Browser();
+            $this->browser = new SMC_NewRelic_Browser();
         }// end if
 
         return $this->browser;
@@ -52,7 +52,7 @@ class GO_NewRelic
     {
         if (!$this->apm) {
             require_once __DIR__ . '/class-go-newrelic-apm.php';
-            $this->apm = new GO_NewRelic_APM($this);
+            $this->apm = new SMC_NewRelic_APM($this);
         }// end if
 
         return $this->apm;
@@ -72,7 +72,7 @@ class GO_NewRelic
         require_once __DIR__ . '/class-go-newrelic-wpcli.php';
 
         // declare the class to WP:CLI
-        WP_CLI::add_command('go-newrelic', 'GO_NewRelic_Wpcli');
+        WP_CLI::add_command('go-newrelic', 'SMC_NewRelic_Wpcli');
 
         $this->wpcli = TRUE;
     }
@@ -174,15 +174,15 @@ class GO_NewRelic
 
 //END class
 
-function go_newrelic()
+function smc_newrelic()
 {
-    global $go_newrelic;
+    global $smc_newrelic;
 
-    if (!isset($go_newrelic) || !is_object($go_newrelic)) {
-        $go_newrelic = new GO_NewRelic();
+    if (!isset($smc_newrelic) || !is_object($smc_newrelic)) {
+        $smc_newrelic = new SMC_NewRelic();
     }// END if
 
-    return $go_newrelic;
+    return $smc_newrelic;
 }
 
-// END go_newrelic
+// END smc_newrelic

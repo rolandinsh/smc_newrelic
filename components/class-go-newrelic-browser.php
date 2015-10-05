@@ -1,6 +1,6 @@
 <?php
 
-class GO_NewRelic_Browser
+class SMC_NewRelic_Browser
 {
 
     private $name = 'New Relic';

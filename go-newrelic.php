@@ -10,4 +10,4 @@
 
 // include required components
 require_once dirname( __FILE__ ) .'/components/class-go-newrelic.php';
-go_newrelic();
+smc_newrelic();
